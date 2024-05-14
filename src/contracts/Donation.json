@@ -1,0 +1,184 @@
+[
+  {
+    "inputs": [],
+    "name": "DonationNotAvailable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NothingToWithdraw",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "WithdrawFailed",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "Received",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_requestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "closeRequest",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_requestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "collect",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_requestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "donate",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllRequests",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isAvailable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Donation.Request[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_requestId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRequest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isAvailable",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Donation.Request",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "openRequest",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]
